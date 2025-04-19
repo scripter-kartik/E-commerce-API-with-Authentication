@@ -11,7 +11,7 @@ config({ path: '.env' })
 // user router
 app.use('/api/user', userRouter);
 // product router
-app.use('/api/product ', productRouter);
+app.use('/api/product', productRouter);
 // home route
 app.get('/', (req, res) => {
     res.json({ message: "This is home route working" });
@@ -24,4 +24,4 @@ mongoose.connect(process.env.MONGO_URI,
     .then(() => console.log("MongoDb Connected"))
     .catch((err) => console.log(err));
 const port = process.env.PORT;
-app.listen(port, () => console.log(`server is running on port ${port}`));
+app.listen(port, () => console.log(`server is running on port ${port}`)); 
